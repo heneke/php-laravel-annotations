@@ -1,0 +1,41 @@
+{
+  "name": "hhit/laravel-annotations",
+  "description": "Annotations for the Laravel Framework",
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": ">=5.6",
+    "doctrine/annotations": "^1.2.7",
+    "illuminate/routing": "^5.3.4",
+    "friendsofphp/php-cs-fixer": "^1.12"
+  },
+  "require-dev": {
+    "mockery/mockery": "^0.9.5",
+    "phpunit/phpunit": "^5.5.4",
+    "illuminate/events": "^5.3.4",
+    "jameshalsall/licenser": "^0.5.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "HHIT\\Illuminate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "HHIT\\Illuminate\\": "test/"
+    }
+  },
+  "scripts": {
+    "fix-cs": [
+      "php-cs-fixer fix"
+    ],
+    "update-license": [
+      "licenser run src mit -o \"Hendrik Heneke\" --replace-existing",
+      "licenser run test mit -o \"Hendrik Heneke\" --replace-existing"
+    ],
+    "prepare-source": [
+      "@update-license",
+      "@fix-cs"
+    ]
+  }
+}

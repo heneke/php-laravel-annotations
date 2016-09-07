@@ -1,0 +1,14 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>test</directory>
+            <include>*Test.php</include>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <blacklist>
+            <directory>test</directory>
+            <directory>vendor</directory>
+        </blacklist>
+    </filter>
+</phpunit>
