@@ -28,6 +28,7 @@ namespace HHIT\Illuminate\Providers;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use HHIT\Illuminate\Routing\AnnotatedControllerRegistrar;
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 abstract class AbstractAnnotatedClassesProvider extends ServiceProvider
