@@ -35,35 +35,35 @@ use HHIT\Illuminate\Routing\Annotation\RequestMapping;
 class PrefixedController
 {
     /**
-     * @RequestMapping(uri="/get")
+     * @RequestMapping(uri="/get", method="GET")
      */
     public function get()
     {
     }
 
     /**
-     * @RequestMapping(uri="/get_middleware", middleware="methodMiddleware")
+     * @RequestMapping(uri="/get_middleware", method="GET", middleware="methodMiddleware")
      */
     public function get_middlware()
     {
     }
 
     /**
-     * @RequestMapping(uri="/get_name", name="get_name")
+     * @RequestMapping(uri="/get_name", method="GET", name="get_name")
      */
     public function get_name()
     {
     }
 
     /**
-     * @RequestMapping(uri="/get_domain", domain="some.domain.com")
+     * @RequestMapping(uri="/get_domain", method="GET", domain="some.domain.com")
      */
     public function get_domain()
     {
     }
 
     /**
-     * @RequestMapping(uri="/get_all", name="get_all", domain="some.domain.com", middleware="allMiddleware")
+     * @RequestMapping(uri="/get_all", method="GET", name="get_all", domain="some.domain.com", middleware="allMiddleware")
      */
     public function get_all()
     {

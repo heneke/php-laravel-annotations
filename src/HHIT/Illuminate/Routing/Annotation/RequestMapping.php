@@ -49,8 +49,9 @@ class RequestMapping
      *
      * @var string
      * @Enum({"ANY","GET","HEAD","POST","PUT","DELETE","PATCH","OPTIONS"})
+     * @Required
      */
-    public $method = 'GET';
+    public $method;
 
     /**
      * Route name for this request mapping.
