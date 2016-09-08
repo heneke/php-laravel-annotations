@@ -29,17 +29,11 @@ namespace HHIT\Illuminate\Providers;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class AnnotationReaderProvider extends ServiceProvider
 {
     protected $controllers = [];
-
-    public function boot(AnnotationReader $annotationReader, Router $router)
-    {
-        $this->addRoutes($annotationReader, $router);
-    }
 
     public function register()
     {
