@@ -35,11 +35,15 @@ class AnnotationReaderProvider extends ServiceProvider
 {
     protected $controllers = [];
 
+    public function __construct(Application $app)
+    {
+        parent::__construct($app);
+        AnnotationRegistry::registerAutoloadNamespace('HHIT\Illuminate\Routing\Annotation', realpath(__DIR__.'/../../../'));
+    }
+
     public function register()
     {
         $this->app->singleton(AnnotationReader::class, function (Application $app) {
-            AnnotationRegistry::registerAutoloadNamespace('HHIT\Illuminate\Routing\Annotation', realpath(__DIR__.'/../../../../../src'));
-
             return new AnnotationReader();
         });
     }
